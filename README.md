@@ -11,10 +11,9 @@
 ```html
 
 <style>
-    img[data-sizes]{width:100%;}
+img[data-sizes]{width:100%;}
 </style>
-
-```html
+```
 
 ``` js
 var gulp = require('gulp');
@@ -33,6 +32,7 @@ gulp.task('views', function() {
 
 });
 ```
+
 
 You put html in:
 ``` html
