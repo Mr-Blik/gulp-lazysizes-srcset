@@ -6,6 +6,16 @@
 
 ## Usage
 
+### css
+
+```html
+
+<style>
+    img[data-sizes]{width:100%;}
+</style>
+
+```html
+
 ``` js
 var gulp = require('gulp');
 var lazyScr = require('gulp-lazysizes-srcset');
