@@ -45,7 +45,7 @@ And get html out:
 
 	<img class="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" data-srcset="images/default/example@1x.jpg 1x, images/default/example@2x.jpg 2x, images/default/example@3x.jpg 3x" />
 ```
-placeholder
+Responsive Images with breakpoints
 
 ``` js
 var gulp = require('gulp');
@@ -63,6 +63,17 @@ gulp.task('views', function() {
     .pipe(gulp.dest('./build'));
 
 });
+```
+You put html in:
+``` html
+
+	<img class="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" />
+```
+
+And get html out:
+``` html
+
+	<img class="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" data-srcset="images/default/example-320x.jpg 320w, images/default/example-640x.jpg 640w, images/default/example-960x.jpg 960w" />
 ```
 
 ## Options (Optional)
