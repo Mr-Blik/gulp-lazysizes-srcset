@@ -26,7 +26,7 @@ gulp.task('views', function() {
     decodeEntities: false,
 	data_src: 'data-src',
 	data_srcset: 'data-srcset',
-	suffix: {1: '@1x', 2: '@2x', 3: '@3x', 4: ''}
+	suffix: {'1x': '@1x', '2x': '@2x', '3x': '@3x', '4x': ''}
 	}))
     .pipe(gulp.dest('./build'));
 
@@ -37,13 +37,13 @@ gulp.task('views', function() {
 You put html in:
 ``` html
 
-	<img src="images/default/example.jpg" data-sizes="auto" alt="example image" />
+	<img clas="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" />
 ```
 
 And get html out:
 ``` html
 
-	<img src="images/default/example.jpg" data-sizes="auto" alt="example image" srcset="images/default/example@1x.jpg 1x, images/default/example@2x.jpg 2x, images/default/example@3x.jpg 3x" />
+	<img data-src="images/default/example.jpg" data-sizes="auto" alt="example image" data-srcset="images/default/example@1x.jpg 1x, images/default/example@2x.jpg 2x, images/default/example@3x.jpg 3x" />
 ```
 
 ## Options (Optional)
@@ -51,6 +51,6 @@ And get html out:
 ### options.suffix
 Type: ```Object```
 
-Default: ```{1: '@1x', 2: '@2x', 3: '@3x'}```
+Default: ```{'1x': '@1x', '2x': '@2x', '3x': '@3x'}```
 
 The suffix will insert to image's path, the key is resolution, and value is suffix.
