@@ -14,6 +14,7 @@
 img[data-sizes]{width:100%;}
 </style>
 ```
+Responsive Images For Retina
 
 ``` js
 var gulp = require('gulp');
