@@ -37,13 +37,13 @@ gulp.task('views', function() {
 You put html in:
 ``` html
 
-	<img clas="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" />
+	<img class="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" />
 ```
 
 And get html out:
 ``` html
 
-	<img data-src="images/default/example.jpg" data-sizes="auto" alt="example image" data-srcset="images/default/example@1x.jpg 1x, images/default/example@2x.jpg 2x, images/default/example@3x.jpg 3x" />
+	<img class="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" data-srcset="images/default/example@1x.jpg 1x, images/default/example@2x.jpg 2x, images/default/example@3x.jpg 3x" />
 ```
 
 ## Options (Optional)
