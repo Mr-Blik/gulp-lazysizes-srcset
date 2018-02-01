@@ -1,8 +1,8 @@
-# gulp-lazysizes-srcset
+# gulp-lazysizes-data-srcset
 
 ## Install
 
-`npm install gulp-lazysizes-srcset`
+`npm install gulp-lazysizes-data-srcset`
 
 ## Usage
 
@@ -18,7 +18,7 @@ Responsive Images For Retina
 
 ``` js
 var gulp = require('gulp');
-var lazyScr = require('gulp-lazysizes-srcset');
+var lazyScr = require('gulp-lazysizes-data-srcset');
 
 gulp.task('views', function() {
 
@@ -49,7 +49,7 @@ Responsive Images with breakpoints
 
 ``` js
 var gulp = require('gulp');
-var lazyScr = require('gulp-lazysizes-srcset');
+var lazyScr = require('gulp-lazysizes-data-srcset');
 
 gulp.task('views', function() {
 
