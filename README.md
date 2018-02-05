@@ -1,8 +1,8 @@
-# gulp-lazysizes-data-srcset
+# gulp-lazysizes-srcset
 
 ## Install
 
-`npm install gulp-lazysizes-data-srcset`
+`npm install gulp-lazysizes-srcset`
 
 ## Usage
 
@@ -18,7 +18,7 @@ Responsive Images For Retina
 
 ``` js
 var gulp = require('gulp');
-var lazyScr = require('gulp-lazysizes-data-srcset');
+var lazyScr = require('gulp-lazysizes-srcset');
 
 gulp.task('views', function() {
 
@@ -58,7 +58,7 @@ gulp.task('views', function() {
     decodeEntities: false,
 	data_src: 'data-src',
 	data_srcset: 'data-srcset',
-	suffix: {'320w': '-320x', '640w': '-640x', '960w': '-960x'}
+	suffix: {'320w': '@320w', '640w': '@640w', '960w': '@960w'}
 	}))
     .pipe(gulp.dest('./build'));
 
@@ -73,7 +73,7 @@ You put html in:
 And get html out:
 ``` html
 
-	<img class="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" data-srcset="images/default/example-320x.jpg 320w, images/default/example-640x.jpg 640w, images/default/example-960x.jpg 960w" />
+	<img class="lazyload" data-src="images/default/example.jpg" data-sizes="auto" alt="example image" data-srcset="images/default/example@320w.jpg 320w, images/default/example@640w.jpg 640w, images/default/example@960w.jpg 960w" />
 ```
 
 ## Options (Optional)
