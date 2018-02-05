@@ -8,9 +8,9 @@ var reImageSrc = /^((?:(?:http|https):\/\/)?(?:.+))(\.(?:gif|png|jpg|jpeg|webp|s
 
 var defaultOptions = {
 	decodeEntities: false,
-	data_src: 'src',
-	data_srcset: 'srcset',
-	suffix: {1: '@1x', 2: '@2x', 3: '@3x'}
+	data_src: 'data-src',
+	data_srcset: 'data-srcset',
+	suffix: {'1x': '@1x', '2x': '@2x', '3x': '@3x'}
 }
 
 var lazyScr = function(options){
@@ -33,25 +33,25 @@ var lazyScr = function(options){
 		var $ = cheerio.load( content, options );
 
 		var imgList = $('img[data-sizes]');
-		
+
 		imgList.each(function(item){
 			var _this = $(this);
 			var _src = _this.attr(options.data_src);
 			var tmpSrc = [];
-			
+
 			var match = _src.match(reImageSrc);
-			
+
 			// not a valid src attribute
 			if (match === null){
 				return true;
 			}
 
 			for( var key in options.suffix ){
-				tmpSrc.push( match[1] + options.suffix[key] + match[2] +' '+ key + 'x' );
+				tmpSrc.push( match[1] + options.suffix[key] + match[2] +' '+ key );
 			}
-			
+
 			_this.attr(options.data_srcset, tmpSrc.join(', '));
-		
+
 		});
 		// console.log($.html());
 
